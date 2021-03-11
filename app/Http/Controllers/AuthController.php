@@ -14,7 +14,7 @@ class AuthController extends Controller
 {
   public function signin()
   {
-    // Initialize the OAuth client
+   // Initialize the OAuth client
     $oauthClient = new \League\OAuth2\Client\Provider\GenericProvider([
       'clientId'                => config('azure.appId'),
       'clientSecret'            => config('azure.appSecret'),
@@ -31,7 +31,8 @@ class AuthController extends Controller
     session(['oauthState' => $oauthClient->getState()]);
 
     // Redirect to AAD signin page
-    return redirect()->away($authUrl);
+    return redirect()->away($authUrl);  
+    //echo "hello";
   }
 
   public function callback(Request $request)
