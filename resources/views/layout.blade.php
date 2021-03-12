@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> <?php echo "<p>Hello {$_SERVER['REMOTE_USER']}.</p>";?> </title>
+    <title> home </title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -13,7 +13,7 @@
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container">
-        <a href="/" class="navbar-brand"> <?php echo "<p>Hello {$_SERVER['REMOTE_USER']}.</p>";?></a>
+        <a href="/" class="navbar-brand">title</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -25,8 +25,7 @@
             </li>
             @if(isset($userName))
               <li class="nav-item" data-turbolinks="false">
-                <a href="/calendar" class="nav-link{{$_SERVER['REQUEST_URI'] == '/calendar' ? ' active' : ''}}">Calendar</a>
-              </li>
+                              </li>
             @endif
           </ul>
           <ul class="navbar-nav justify-content-end">

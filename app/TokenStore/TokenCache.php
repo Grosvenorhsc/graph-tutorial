@@ -11,8 +11,8 @@ class TokenCache {
       'refreshToken' => $accessToken->getRefreshToken(),
       'tokenExpires' => $accessToken->getExpires(),
       'userName' => $user->getDisplayName(),
-      'userEmail' => null !== $user->getMail() ? $user->getMail() : $user->getUserPrincipalName(),
-      'userTimeZone' => $user->getMailboxSettings()->getTimeZone()
+      'userEmail' => $user->getUserPrincipalName(),
+      
     ]);
   }
 
@@ -22,7 +22,6 @@ class TokenCache {
     session()->forget('tokenExpires');
     session()->forget('userName');
     session()->forget('userEmail');
-    session()->forget('userTimeZone');
   }
 
   // <GetAccessTokenSnippet>
